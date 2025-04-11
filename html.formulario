@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição no Programa Trilhas</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container-principal">
+    <div class="bloco-imagem">
+      <img src="/Assets/Ilustration.png" alt="Pessoa estudando">
+      <img src="/Assets/Group 2.png" alt="Logo do Trilhas Inova" class="logo-trilhas">
+    </div>
+
+    <section class="bloco-formulario">
+      <h2 class="form-titulo">Inscreva-se no Programa</h2>
+      <p class="form-subtitulo">Preencha os campos abaixo para realizar sua inscrição no programa Trilhas no Maranhão.</p>
+      <p class="form-descricao">Dados pessoais</p>
+
+      <form id="formularioInscricao" class="formulario-campos">
+        <label for="nome">Nome completo</label>
+        <input id="nome" class="input-texto" type="text" placeholder="Digite seu nome completo" required>
+
+        <label for="data-nascimento">Data de Nascimento</label>
+        <input id="data-nascimento" class="input-texto" type="date" required max="2025-03-19">
+
+        <label for="cpf">CPF</label>
+        <input id="cpf" class="input-texto" type="text" placeholder="123.456.789-00" required>
+
+        <label for="genero">Gênero</label>
+        <select id="genero" class="select-input" required>
+          <option value="">Escolha uma opção</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Outro">Outro</option>
+        </select>
+
+        <label for="email">E-mail</label>
+        <input id="email" class="input-texto" type="email" placeholder="exemplo@email.com" required>
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" class="input-texto" type="tel" placeholder="(99) 9 9999-9999" required>
+
+        <label for="documento">Documento de Identidade</label>
+        <input id="documento" class="input-texto" type="file" required>
+
+        <label for="cep">CEP</label>
+        <input id="cep" class="input-texto" type="text" placeholder="65XXX-XXX" required>
+
+        <label for="endereco">Endereço</label>
+        <input id="endereco" class="input-texto" type="text" required>
+
+        <label for="numero">Número</label>
+        <input id="numero" class="input-texto" type="text" placeholder="Ex: 123 ou S/N" required>
+
+        <label for="cidade">Cidade</label>
+        <input id="cidade" class="input-texto" type="text" placeholder="Digite sua cidade" required>
+
+        <label for="estado">Estado</label>
+        <input id="estado" class="input-texto" type="text" value="MA" readonly>
+
+        <label>Trilha de Aprendizagem</label>
+        <div class="opcoes-trilha">
+          <label class="trilha-item">
+            <input type="radio" name="trilha" id="front-end" hidden>
+            <img src="/Assets/front-end.png" alt="Front-End" class="icone-trilha">
+            Front-End
+          </label>
+          <label class="trilha-item">
+            <input type="radio" name="trilha" id="back-end" hidden>
+            <img src="/Assets/back-end.png" alt="Back-End" class="icone-trilha">
+            Back-End
+          </label>
+          <label class="trilha-item">
+            <input type="radio" name="trilha" id="jogos" hidden>
+            <img src="/Assets/jogos.png" alt="Jogos Digitais" class="icone-trilha">
+            Jogos
+          </label>
+          <label class="trilha-item">
+            <input type="radio" name="trilha" id="design" hidden>
+            <img src="/Assets/ux.png" alt="Design UX" class="icone-trilha">
+            Design
+          </label>
+          <label class="trilha-item">
+            <input type="radio" name="trilha" id="ciencia-dados" hidden>
+            <img src="/Assets/Frame 48095973.png" alt="Ciência de Dados" class="icone-trilha">
+            Ciência de Dados
+          </label>
+        </div>
+
+        <label class="politica-privacidade">
+          <input type="checkbox" required>
+          Concordo com os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>.
+        </label>
+
+        <button type="submit" class="botao-enviar">Enviar Inscrição</button>
+      </form>
+    </section>
+  </div>
+
+  <div class="area-voltar">
+    <button class="btn-voltar" onclick="window.location.href='index.html'">Voltar ao Início</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</body>
+</html>
